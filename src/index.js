@@ -6,12 +6,14 @@ import Login from './components/Login';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Signup from './components/Signup';
+import Forgot from './components/Forgot';
 
 ReactDOM.render(
   <BrowserRouter>
   <Routes>
     <Route path='/signup' element={<Signup />} />
     <Route path='/login' element={<Login />} />
+    <Route path='/Forgot' element={<Forgot />} />
   </Routes>
   </BrowserRouter>,
   document.getElementById("root")
