@@ -1,6 +1,8 @@
 import Parse from 'parse'
 import { useRef, useState } from "react";
 import { Link } from "react-router-dom";
+import ParticlesBg from 'particles-bg'
+
 
 Parse.initialize('myAppId', '3017258d6379457b86c77f3bb22eaa99');
 Parse.serverURL = 'http://164.92.121.0:1337/parse'
@@ -29,13 +31,14 @@ function Signup() {
 
   return (
     <section class="h-100">
+      <ParticlesBg  num={150} type="circle" bg={true} />
       <div class="container h-100">
         <div class="row justify-content-sm-center h-100">
           <div class="col-xxl-4 col-xl-5 col-lg-5 col-md-7 col-sm-9">
             <div class="text-center my-5">
               <h1>Welcome to our React Tutorial</h1>
             </div>
-            <div class="card shadow-lg">
+            <div class="card shadow-lg" >
               <div class="card-body p-5">
                 <h1 class="fs-4 card-title fw-bold mb-4">Register</h1>
                 <form method="POST" class="needs-validation" onSubmit={submit}>
@@ -43,17 +46,11 @@ function Signup() {
                   <div class="mb-3">
                     <label class="mb-2 text-muted" >E-Mail Address</label>
                     <input ref={email} id="email" type="email" class="form-control" name="email" required />
-                    <div class="invalid-feedback">
-                      Email is invalid
-                    </div>
                   </div>
 
                   <div class="mb-3">
                     <label class="mb-2 text-muted" >Password</label>
                     <input ref={password} id="password" type="password" class="form-control" name="password" required />
-                    <div class="invalid-feedback">
-                      Password is required
-                    </div>
                   </div>
 
                   <p type="text" class="form-text text-muted mb-3" >{msg}</p>
