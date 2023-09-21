@@ -9,7 +9,7 @@ import { useState } from "react";
 
 
 function App() {
-  const [childValue, setChildValue] = useState('FAQ');
+  const [childValue, setChildValue] = useState('Home');
 
   const handleChildValueChange = (value) => {
     setChildValue(value);
@@ -20,7 +20,7 @@ function App() {
       <Container fluid>
         <Row >
           <Col lg="3" xl="2" xxl="2" className="d-none d-lg-block" style={{ marginLeft: '-15px' }}>
-            <Navbar onValueChange={handleChildValueChange}/>
+            <Navbar />
           </Col>
           <Col lg="9" xl="10" xxl="10" >
             {childValue === 'Home' && <Home />}
