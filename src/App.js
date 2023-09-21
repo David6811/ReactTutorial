@@ -11,6 +11,9 @@ import { useState } from "react";
 function App() {
   const [childValue, setChildValue] = useState('Home');
 
+  const handleChildValueChange = (value) => {
+    setChildValue(value);
+  };
 
   return (
     <div>
